@@ -15,7 +15,7 @@ critic coordinates training.
 - An overview of the HIL-HARC method and training framework.
 - Results for tennis-ball picking, banana picking, and pot resetting.
 - Baseline and HIL-HARC evaluation videos, including Unitree G1 simulation.
-- Training-rollout videos for the Unitree G1, banana, and pot tasks.
+- Training-rollout videos for the Unitree G1 and banana tasks.
 - A publication-ready resources section for the paper and BibTeX.
 
 Detailed project metadata and reported results are maintained in

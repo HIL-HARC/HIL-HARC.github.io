@@ -787,18 +787,6 @@ h1 span {
   object-fit: contain;
 }
 
-.video-placeholder {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  display: grid;
-  place-items: center;
-  background: #0b111a;
-  color: #d8e2ec;
-  font-size: 0.82rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
 .video-card figcaption {
   display: flex;
   justify-content: space-between;
