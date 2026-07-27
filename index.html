@@ -117,9 +117,9 @@
       </section>
 
       <section class="stats" aria-label="Project highlights">
-        <div><strong>+35 pp</strong><span>average real-world improvement</span></div>
-        <div><strong>+55 pp</strong><span>maximum real-world improvement</span></div>
-        <div><strong>3–15×</strong><span>larger randomization regions</span></div>
+        <div><strong>75%</strong><span>average real-world success</span></div>
+        <div><strong>+70 pp</strong><span>maximum absolute improvement</span></div>
+        <div><strong>0%</strong><span>final intervention rate</span></div>
       </section>
 
       <section class="section overview" id="overview">
@@ -248,8 +248,8 @@
           <div class="section-heading">
             <h2>Experimental results</h2>
             <p>
-              The proposed method outperforms HIL-SERL across
-              large-randomization manipulation tasks on two robotic arms.
+              The proposed method outperforms HIL-SERL across real-world and
+              simulated manipulation tasks under large-scale randomization.
             </p>
           </div>
 
@@ -262,7 +262,7 @@
               <div
                 class="result-chart"
                 role="img"
-                aria-label="HIL-SERL and our success rates: tennis ball 60 versus 80 percent; banana 60 versus 90 percent; pot reset 0 versus 55 percent"
+                aria-label="HIL-SERL and our success rates: tennis ball 60 versus 80 percent; banana 60 versus 90 percent; pot reset 0 versus 55 percent; simulated block relocation 25 versus 95 percent"
               >
                 <i class="baseline" style="--height: 60%" data-value="60%"></i>
                 <i class="ours" style="--height: 80%" data-value="80%"></i>
@@ -270,30 +270,59 @@
                 <i class="ours" style="--height: 90%" data-value="90%"></i>
                 <i class="baseline" style="--height: 0%" data-value="0%"></i>
                 <i class="ours" style="--height: 55%" data-value="55%"></i>
+                <i class="baseline" style="--height: 25%" data-value="25%"></i>
+                <i class="ours" style="--height: 95%" data-value="95%"></i>
               </div>
               <div class="chart-labels" aria-hidden="true">
                 <span>Tennis ball</span>
                 <span>Banana</span>
                 <span>Pot reset</span>
+                <span>Blocks (sim.)</span>
               </div>
-              <figcaption>Success rate (%) over 20 real-world evaluation episodes</figcaption>
+              <figcaption>Success rate (%) over 20 evaluation episodes per task</figcaption>
             </figure>
             <div>
               <p class="eyebrow">Evaluation success</p>
-              <h3>35 pp average improvement.<br />Up to 55 pp on a single task.</h3>
+              <h3>75% average real-world success.<br />95% in simulated block relocation.</h3>
               <p>
                 Tennis-ball success improves from 60% to 80%, banana success
-                from 60% to 90%, and pot reset from 0% to 55%. Each result is
-                measured over 20 evaluation episodes after real-world training.
-                We report absolute per-task improvements because task
-                difficulties differ.
+                from 60% to 90%, pot reset from 0% to 55%, and simulated block
+                relocation from 25% to 95%. The three real-world tasks are
+                trained for 160 minutes, improving the average success rate
+                from 40% to 75%.
               </p>
             </div>
           </div>
 
           <div class="metrics">
+            <div><strong>160 min</strong><span>real-world training budget</span></div>
+            <div><strong>0%</strong><span>intervention rate at convergence</span></div>
             <div><strong>+35 pp</strong><span>average real-world improvement</span></div>
-            <div><strong>+55 pp</strong><span>maximum real-world improvement</span></div>
+            <div><strong>+70 pp</strong><span>maximum absolute improvement</span></div>
+          </div>
+
+          <div class="evidence-grid">
+            <article>
+              <p class="eyebrow">Sample efficiency</p>
+              <h3>Less expert supervision across every task</h3>
+              <p>
+                Counting the initial demonstrations as 20 equivalent episodes,
+                our method uses 69, 76, 111, and 115 expert-equivalent episodes
+                for tennis ball, banana, pot reset, and block relocation. HIL-SERL
+                requires 80, 102, 132, and 189, respectively. Short corrective
+                interventions focus expert effort on poor behavior and recovery.
+              </p>
+            </article>
+            <article>
+              <p class="eyebrow">Learning behavior</p>
+              <h3>Faster convergence and more efficient execution</h3>
+              <p>
+                Twenty-episode running averages show success rates rising toward
+                convergence while intervention rates and episode durations fall.
+                Intervention rates ultimately reach 0%, indicating that the
+                learned policies no longer require continuous expert supervision.
+              </p>
+            </article>
           </div>
         </div>
       </section>

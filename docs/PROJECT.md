@@ -50,7 +50,8 @@ real-world manipulation tasks, as well as on a simulated Unitree G1 humanoid:
 - simulated block relocation.
 
 The experiments use dimension-wise randomization regions approximately 3–15
-times larger than prior work. Evaluation uses 20 episodes per task.
+times larger than prior work. Evaluation uses 20 episodes per task. Real-world
+training runs for 160 minutes of wall-clock time.
 
 ## Headline results
 
@@ -59,11 +60,27 @@ times larger than prior work. Evaluation uses 20 episodes per task.
 - Banana picking improves from 60% to 90% success: **+30 percentage points**,
   or **50% relative improvement**.
 - Pot resetting improves from 0% to **55%**.
-- Simulated block relocation improves from 25% to **95%**.
+- Simulated block relocation improves from 25% to **95%**, an absolute gain of
+  70 percentage points and a relative improvement of 280%.
+- Average success across the three real-world tasks improves from **40% to
+  75%**.
 - The average absolute improvement across the three real-world tasks is **35
   percentage points**.
 - The maximum absolute improvement across the real-world tasks is **55
   percentage points** on pot reset.
+
+## Sample efficiency
+
+When the initial demonstration transition set is converted to 20 equivalent
+episodes, total expert data for tennis-ball pick-and-place, banana
+pick-and-place, pot reset, and simulated block relocation is **69, 76, 111, and
+115 episodes** with our method, compared with **80, 102, 132, and 189 episodes**
+with HIL-SERL. Interventions are short corrective segments rather than complete
+episodes, concentrating expert input on poor behavior and failure recovery.
+
+Twenty-episode running averages show success increasing toward convergence as
+intervention rates and episode durations decrease. Intervention rates
+ultimately reach **0%**.
 
 ## Links
 
