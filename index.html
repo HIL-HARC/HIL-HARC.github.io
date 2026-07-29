@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Efficient real-world online reinforcement learning for robot manipulation via centralized training with decentralized execution and a decomposed critic."
+      content="Efficient Real-World Online Reinforcement Learning for Robot Manipulation via Centralized Training and Critic Decomposition."
     />
     <meta name="theme-color" content="#ffffff" />
 
     <meta property="og:type" content="website" />
     <meta
       property="og:title"
-      content="Efficient Real-World Online Reinforcement Learning for Robot Manipulation via CTDE and Decomposed Critic"
+      content="Efficient Real-World Online Reinforcement Learning for Robot Manipulation via Centralized Training and Critic Decomposition"
     />
     <meta
       property="og:description"
@@ -23,7 +23,7 @@
       content="https://hil-harc.github.io/"
     />
 
-    <title>Efficient Real-World Online Reinforcement Learning via CTDE and Decomposed Critic — HIL-HARC</title>
+    <title>Efficient Real-World Online Reinforcement Learning for Robot Manipulation via Centralized Training and Critic Decomposition — HIL-HARC</title>
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="styles.css" />
     <script src="script.js" defer></script>
@@ -52,7 +52,7 @@
           <p class="eyebrow">Real-world reinforcement learning for robot manipulation</p>
           <h1>
             Efficient Real-World Online Reinforcement Learning for Robot Manipulation
-            <span>via CTDE and Decomposed Critic</span>
+            <span>via Centralized Training and Critic Decomposition</span>
           </h1>
           <p class="lede">
             A human-in-the-loop framework that combines CTDE and Hybrid Reward
@@ -130,36 +130,7 @@
         <div class="section-content">
           <h2 class="display-copy">Abstract</h2>
           <p class="body-copy">
-            Real-world online reinforcement learning (RL) provides a promising
-            approach for training robotic manipulation policies directly in the
-            physical world, avoiding the sim-to-real gap and enabling continuous
-            policy refinement through human-in-the-loop interaction. Recent
-            methods have demonstrated sample-efficient learning through human
-            intervention but remain limited to small randomization ranges and
-            encounter challenges due to the non-stationarity induced by
-            concurrently training multiple agents. To address these limitations,
-            we introduce a unified framework that combines centralized training
-            with decentralized execution (CTDE) and a Hybrid Reward Architecture
-            (HRA). This enables multiple actors to share a centralized multi-head
-            critic. Specifically, we decouple continuous Cartesian arm pose
-            control and discrete gripper control into two actor policies optimized
-            under a centralized critic. The critic is decomposed into task and
-            grasp heads, corresponding to the sparse task reward and a
-            potential-based grasping reward, respectively. We accordingly
-            reformulate the critic and actor objectives to exploit the decomposed
-            Q-values while explicitly accounting for the categorical action
-            distribution of the discrete gripper policy. Experimental results
-            demonstrate that the proposed framework substantially improves both
-            sample efficiency and policy performance. We validate our approach on
-            two robotic arms and a simulated humanoid robot across tennis-ball and
-            banana pick-and-place, pot reset, and simulated block relocation tasks
-            under dimension-wise domain randomization regions approximately
-            3–15× larger than those considered in prior work. Compared with a
-            state-of-the-art baseline, our method improves the success rate from
-            60% to 80% on tennis-ball pick-and-place, from 60% to 90% on banana
-            pick-and-place, and from 25% to 95% on simulated block relocation,
-            while also successfully accomplishing a task where the baseline
-            consistently fails.
+            Real-world online reinforcement learning (RL) provides a promising approach for training robotic manipulation policies directly in the physical world, avoiding the sim-to-real gap and enabling continuous policy refinement through human-in-the-loop interaction. Recent methods have demonstrated sample-efficient learning through human intervention but remain limited to small randomization ranges and encounter challenges with the non-stationarity induced by concurrently training multiple agents. To address these limitations, we introduce a unified framework that combines centralized training with decentralized execution (CTDE) and a Hybrid Reward Architecture (HRA). This enables multiple actors to share a centralized multi-head critic. Specifically, we decouple continuous Cartesian arm pose control and discrete gripper control into two actor policies optimized under a centralized critic. The critic is decomposed into task and grasp heads, corresponding to the sparse task reward and a potential-based grasping reward, respectively. We accordingly reformulate the critic and actor objectives to exploit the decomposed Q-values while explicitly accounting for the categorical action distribution of the discrete gripper policy. Experimental results demonstrate that the proposed framework substantially improves both sample efficiency and policy performance. We validate our approach on two robotic arms and a simulated humanoid robot across tennis ball and banana pick-and-place, pot reset, and simulated block relocation tasks under dimension-wise domain randomization, approximately 5-25x larger than those considered in prior work. Compared with a state-of-the-art baseline, our method improves the success rate from 60% to 80% on tennis ball pick-and-place, from 60% to 90% on banana pick-and-place, and from 25% to 95% on simulated block relocation, while also successfully accomplishing a task where the baseline consistently fails.
           </p>
         </div>
       </section>
@@ -353,7 +324,7 @@
 
             <div class="video-task">
               <div class="video-task-heading">
-                <h4>Unitree G1 block manipulation</h4>
+                <h4>Unitree G1 block relocation</h4>
                 <p>Simulation</p>
               </div>
               <div class="video-grid">
@@ -364,7 +335,7 @@
                     preload="none"
                     playsinline
                     poster="assets/videos/g1_baseline_eval_10.jpg"
-                    aria-label="HIL-SERL Unitree G1 block-manipulation evaluation at ten times speed"
+                    aria-label="HIL-SERL Unitree G1 block relocation evaluation at ten times speed"
                   >
                     <source
                       src="assets/videos/g1_baseline_eval_10.mp4"
@@ -384,7 +355,7 @@
                     preload="none"
                     playsinline
                     poster="assets/videos/g1_hysac_eval_10.jpg"
-                    aria-label="HIL-HARC Unitree G1 block-manipulation evaluation at ten times speed"
+                    aria-label="HIL-HARC Unitree G1 block relocation evaluation at ten times speed"
                   >
                     <source
                       src="assets/videos/g1_hysac_eval_10.mp4"
@@ -403,7 +374,7 @@
             <div class="video-task">
               <div class="video-task-heading">
                 <h4>Tennis-ball pick-and-place</h4>
-                <p>50 × 40 cm workspace</p>
+                <p>50 × 40 cm randomization range</p>
               </div>
               <div class="video-grid">
                 <figure class="video-card">
@@ -452,7 +423,7 @@
             <div class="video-task">
               <div class="video-task-heading">
                 <h4>Banana pick-and-place</h4>
-                <p>30 × 30 cm workspace</p>
+                <p>30 × 30 cm randomization range</p>
               </div>
               <div class="video-grid">
                 <figure class="video-card">
@@ -501,7 +472,7 @@
             <div class="video-task">
               <div class="video-task-heading">
                 <h4>Pot reset</h4>
-                <p>40 × 40 cm workspace</p>
+                <p>40 × 40 cm randomization range</p>
               </div>
               <div class="video-grid">
                 <figure class="video-card">
@@ -560,7 +531,7 @@
 
             <div class="video-task">
               <div class="video-task-heading">
-                <h4>Unitree G1 block manipulation</h4>
+                <h4>Unitree G1 block relocation</h4>
                 <p>Simulation training progression</p>
               </div>
               <div class="video-grid">
@@ -571,7 +542,7 @@
                     preload="none"
                     playsinline
                     poster="assets/videos/g1_baseline_train_100.jpg"
-                    aria-label="HIL-SERL Unitree G1 block-manipulation training at one hundred times speed"
+                    aria-label="HIL-SERL Unitree G1 block relocation training at one hundred times speed"
                   >
                     <source
                       src="assets/videos/g1_baseline_train_100.mp4"
@@ -591,7 +562,7 @@
                     preload="none"
                     playsinline
                     poster="assets/videos/g1_hysac_train_100.jpg"
-                    aria-label="HIL-HARC Unitree G1 block-manipulation training at one hundred times speed"
+                    aria-label="HIL-HARC Unitree G1 block relocation training at one hundred times speed"
                   >
                     <source
                       src="assets/videos/g1_hysac_train_100.mp4"
