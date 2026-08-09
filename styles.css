@@ -118,6 +118,46 @@ nav a:focus-visible {
   margin-inline: auto;
 }
 
+.hero-video {
+  width: 100%;
+  max-width: 100%;
+  margin: 3.5rem auto 0;
+  overflow: hidden;
+  border: 1px solid #a9c4dc;
+  border-radius: 6px;
+  background: #fff;
+}
+
+.hero-video video {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  display: block;
+  background: #0b111a;
+  object-fit: contain;
+}
+
+.hero-video figcaption {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  padding: 0.85rem 1.1rem;
+  border-top: 1px solid var(--line);
+  text-align: left;
+}
+
+.hero-video figcaption strong {
+  color: var(--blue);
+  font-size: 0.95rem;
+}
+
+.hero-video figcaption span {
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
 .eyebrow {
   margin: 0 0 1.25rem;
   color: var(--blue);
@@ -771,6 +811,14 @@ h1 span {
   gap: 1rem;
 }
 
+.video-grid-single {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.video-grid-single .video-card video {
+  aspect-ratio: 16 / 9;
+}
+
 .video-card {
   margin: 0;
   overflow: hidden;
@@ -992,6 +1040,14 @@ footer p {
 
   .author-list {
     gap: 0.15rem 0.85rem;
+  }
+
+  .hero-video {
+    margin-top: 2.5rem;
+  }
+
+  .hero-video figcaption {
+    display: block;
   }
 
   .hero-visual {

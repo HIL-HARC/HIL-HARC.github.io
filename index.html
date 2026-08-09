@@ -25,7 +25,7 @@
 
     <title>Efficient Real-World Online Reinforcement Learning for Robot Manipulation via Centralized Training and Critic Decomposition — HIL-HARC</title>
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css?v=2" />
     <script src="script.js" defer></script>
   </head>
 
@@ -67,6 +67,24 @@
           </div>
 
         </div>
+
+        <figure class="hero-video">
+          <video
+            controls
+            controlslist="nodownload"
+            preload="none"
+            playsinline
+            poster="assets/videos/bottle_eval_10.jpg"
+            aria-label="HIL-HARC bottle stowing evaluation on a humanoid robot at ten times speed"
+          >
+            <source src="assets/videos/bottle_eval_10.mp4" type="video/mp4" />
+            Your browser does not support HTML5 video.
+          </video>
+          <figcaption>
+            <strong>Bottle stowing (new task)</strong>
+            <span>HIL-HARC · Evaluation · 85% success rate (17/20) · 10× speed</span>
+          </figcaption>
+        </figure>
 
         <div
           class="hero-visual"
@@ -525,7 +543,8 @@
               <h3>Training rollouts</h3>
               <p>
                 Accelerated rollouts show the behavior of the baseline and
-                HIL-HARC policies during online training.
+                HIL-HARC policies during online training. Bottle stowing was run
+                with HIL-HARC only.
               </p>
             </div>
 
@@ -615,6 +634,35 @@
                   >
                     <source
                       src="assets/videos/banana_hysac_train_100.mp4"
+                      type="video/mp4"
+                    />
+                    Your browser does not support HTML5 video.
+                  </video>
+                  <figcaption>
+                    <strong>HIL-HARC</strong>
+                    <span>Training · 100× speed</span>
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+
+            <div class="video-task">
+              <div class="video-task-heading">
+                <h4>Bottle stowing</h4>
+                <p>65 minutes wall-clock training. HIL-HARC only</p>
+              </div>
+              <div class="video-grid video-grid-single">
+                <figure class="video-card video-card-ours">
+                  <video
+                    controls
+                    controlslist="nodownload"
+                    preload="none"
+                    playsinline
+                    poster="assets/videos/bottle_training_100.jpg"
+                    aria-label="HIL-HARC bottle stowing training at one hundred times speed"
+                  >
+                    <source
+                      src="assets/videos/bottle_training_100.mp4"
                       type="video/mp4"
                     />
                     Your browser does not support HTML5 video.
