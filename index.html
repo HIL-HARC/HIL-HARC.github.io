@@ -55,8 +55,8 @@
             <span>via Centralized Training and Critic Decomposition</span>
           </h1>
           <p class="lede">
-            A human-in-the-loop framework that combines CTDE and Hybrid Reward
-            Architecture to learn continuous arm motion and discrete gripper
+            A human-in-the-loop framework that combines Centralized Training Decentralized Execution
+            and Hybrid Reward Architecture to learn continuous arm motion and discrete gripper
             control directly on physical robots.
           </p>
 
@@ -67,6 +67,15 @@
           </div>
 
         </div>
+
+        <p class="hero-video-intro">
+          <strong>New Task: Bottle Stowing.</strong> A task integrating two
+          sequential subtasks—bottle pick-and-place and drawer closing—executed
+          with a single policy. The policy is trained and deployed on a
+          quadruped dual-arm robot platform, achieving an
+          <strong>85% success rate (17/20 trials)</strong>. This result was
+          obtained after submission and is not included in the manuscript.
+        </p>
 
         <figure class="hero-video">
           <video
@@ -81,8 +90,8 @@
             Your browser does not support HTML5 video.
           </video>
           <figcaption>
-            <strong>Bottle stowing (new task)</strong>
-            <span>HIL-HARC · Evaluation · 85% success rate (17/20) · 10× speed</span>
+            <strong>Bottle stowing</strong>
+            <span>HIL-HARC · Evaluation · 10× speed</span>
           </figcaption>
         </figure>
 
@@ -649,7 +658,7 @@
             <div class="video-task">
               <div class="video-task-heading">
                 <h4>Bottle stowing</h4>
-                <p>65 minutes wall-clock training. HIL-HARC only</p>
+                <p>65 minutes wall-clock time, 30 × 20 cm randomization range</p>
               </div>
               <div class="video-grid video-grid-single">
                 <figure class="video-card video-card-ours">

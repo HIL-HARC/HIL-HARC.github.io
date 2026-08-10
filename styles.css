@@ -118,10 +118,27 @@ nav a:focus-visible {
   margin-inline: auto;
 }
 
-.hero-video {
+.hero-video-intro {
   width: 100%;
   max-width: 100%;
   margin: 3.5rem auto 0;
+  color: var(--muted);
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.hero-video-intro strong {
+  color: var(--navy);
+  font-weight: 600;
+}
+
+.hero-video {
+  width: 100%;
+  max-width: 100%;
+  margin: 1.4rem auto 0;
   overflow: hidden;
   border: 1px solid #a9c4dc;
   border-radius: 6px;
@@ -201,6 +218,8 @@ h1 span {
   color: var(--muted);
   font-family: "Source Serif 4", Georgia, serif;
   font-size: 1.2rem;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .authors {
@@ -1042,8 +1061,13 @@ footer p {
     gap: 0.15rem 0.85rem;
   }
 
-  .hero-video {
+  .hero-video-intro {
     margin-top: 2.5rem;
+    font-size: 0.95rem;
+  }
+
+  .hero-video {
+    margin-top: 1.1rem;
   }
 
   .hero-video figcaption {
